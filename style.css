@@ -1,8 +1,6 @@
-
 header {
     position: sticky;
     width:100%;
-    height:12%;
     top: 0%;
     background-color: #1F2026;
     min-height:100px;
@@ -14,23 +12,23 @@ body  {
     background-color: #ececec;
     margin:0px;
     padding:0px;
-    height:100%;
+    font-family: 'Sofia';
+    font-size: 26px;
 }
-
 
 #nav {
     text-align:center;
     position: absolute;
 	width: 100%;
+    margin-top: -15px;
 }
 
 li{
-    /* Setting navigation inline, one next to another */
     display:inline-block;
     padding:20px;
     text-align:center;
     color:white;
-    font: bold 20px Arial Black;
+    font-family: 'Alegreya Sans SC';
 }
 
 
@@ -44,8 +42,12 @@ li a {
     text-decoration: none;
 }
 
+label {
+    font-size: 28px;
+    font-family: 'Sofia';
+}
+
 #content {
-    margin: auto;
     color: #191D1F;
     font-size: 38px;
     text-align:center;
@@ -57,10 +59,14 @@ img {
     height: 100%;
 }
 
+h1 {
+    font-size: 32px;
+    font-family: 'Sofia';
+}
+
 
 #footer {
-    font-family: verdana, arial, sans-serif;
-    font-size: 24px;
+    font-size: 32px;
     color: #A5BED3;
     padding: 16px 20px;
 }
@@ -74,6 +80,7 @@ footer {
     margin-bottom: -50px;
 	text-align: center;
     background: #1F2026;
+    font-family: 'Alegreya Sans SC';
 }
 
 table {
@@ -90,18 +97,20 @@ th {
 button {
     padding: 12px 24px;
     text-decoration: none;
-    font-size: 16px;
     font-weight: bold;
     transition-duration: 0.5s;
     background-color: white;
     color: black;
     border: 3px solid #1F2026;
     cursor: pointer;
+    font-family: 'Sofia';
+    font-size: 22px;
 }
 
 button:hover {
     background-color: #1F2026;
     color: white;
+    border-radius: 35px;
 }
 
 
@@ -182,8 +191,8 @@ button:hover {
        }
 
 #contact {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 26px;
+    font-family: 'Alegreya Sans SC';font-size: 32px;
+    font-size: 30px;
     text-align: center;
     margin-top: 60px;
 }
@@ -243,22 +252,25 @@ li i:hover {
 }
 
 #abv {
-    font-size: 12px;
-    margin-right: 100px;
+    position: relative;
+    bottom: 10px;
+    font-size: 14px;
+    margin-left: 90px;
     display: block;
 }
 
 #country {
     position: relative;
-    bottom: 27px;
-    font-size: 12px;
-    margin-left: 100px;
+    bottom: 45px;
+    font-size: 14px;
+    margin-right: 110px;
 }
 
 #wineDescription {
     position: relative;
-    bottom: 25px;
-    font-size: 12px;
+    bottom: 50px;
+    font-size: 13px;
     text-align: center;
-    margin: 20px;
+    margin: 10px;
+    font-family: 'Alegreya Sans SC';
 }
