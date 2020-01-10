@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wine World</title>
+        
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+    </head>
+    
+    <body>
+        <header>
+            <div id="cmsHeader">Welcome To Content Management System</div>
+        </header>
+        
+        <div class="box">
+            <select id="choice" onchange="checkSelection();">
+                <option value="1">View all listed products</option>
+                <option value="2">Add a product</option>
+                <option value="3">Edit a product</option>
+                <option value="4">Remove a product</option>
+                <option value="5">View customer order</option>
+                <option value="6">Delete customer order</option>
+            </select>
+        </div>
+        <p id="msg">You selected to view all listed products</p>
+    </body>
+    
+    <script src="../js/cms.js"></script>
+    
+</html>
