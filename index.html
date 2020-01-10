@@ -2,7 +2,7 @@
 <html>
     <head>
         
-        <title>Wine World</title>
+        <title>Wine World - Home</title>
         
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -56,20 +56,37 @@
     <p>Please fill in this form to create an account.</p>
     <hr>
 
+    <div class="row">
+  <div class="column">
+    <label for="fullName"><b>Full Name</b></label>
+    <input type="text" placeholder="Enter Full Name" name="fullName" required>
+    
+    <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter Home Address" name="address" required>
+    
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
+      
+    <button type="submit" class="btn">Register</button>
 
+  </div>
+  <div class="column">
+      
+    <label for="telephone"><b>Telephone</b></label>
+    <input type="text" placeholder="Enter Telephone Number" name="telephone" required>
+      
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-    
-
-    <button type="submit" class="btn">Register</button>
-      <button type="button" class="btn cancel" onclick="closeRegisterForm()">Close</button>
- 
-
+      
+    <button type="button" class="btn cancel" onclick="closeRegisterForm()">Close</button>
+      
+  </div>
+        
+        
+    </div>
     
 </form>
 </div>
