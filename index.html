@@ -116,6 +116,25 @@
                     <p id="content">
                         Choose a bottle of wine to add it to your cart
                     </p>
+        <div class="search">
+             <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                 
+    <div class="box">
+    <select id="sortBy" onchange="">
+    <option value="1">Featured</option>
+    <option value="2">White Wine</option>
+    <option value="3">Rose Wine</option>
+    <option value="4">Red Wine</option>
+    <option value="5">Price: Low To High</option>
+    <option value="6">Price: High To Low</option>
+  </select>
+        <p id="sortByPara">Sort By</p>
+</div>
+                 
+                 </form>
+</div>
         
         <table>
             <tr>
