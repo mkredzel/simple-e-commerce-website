@@ -1,0 +1,22 @@
+
+{
+    "_id" : ObjectId("xxxxxxxxx random numbers created by mongoDB"),
+    "name" : "nameOfTheWine",
+    "type" : "Red",
+    "price" : 12.00,
+    "country" : "Italy",
+    "abv" : 14.40,
+    "description" : "descriptionOfWine x x x x",
+    "image" : "wine1.png" 
+}
+
+{
+    "_id" : ObjectId("xxxxxxxxx random numbers created by mongoDB"),
+    "name" : "nameOfTheWine",
+    "type" : "White",
+    "price" : 13.00,
+    "country" : "Portugal",
+    "abv" : 15.40,
+    "description" : "descriptionOfWine x x x x",
+    "image" : "wine2.png" 
+}
