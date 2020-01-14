@@ -88,7 +88,7 @@ label {
 }
 
 #content {
-    color: #191D1F;
+    color: black;
     font-size: 38px;
     text-align:center;
 }
@@ -229,7 +229,7 @@ button:hover {
 #map {
     height: 400px;  /* The height is 400 pixels */
     width: 100%;  /* The width is the width of the web page */
-       }
+}
 
 #contact {
     font-size: 36px;
