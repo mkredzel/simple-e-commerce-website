@@ -22,7 +22,7 @@
                     <li><a onclick="openRegisterForm()">REGISTER</a></li>   
                     <li><a onclick="openLoginForm()">LOGIN</a></li>   
                     <li><a href="contact.html">CONTACT</a></li>   
-                    <li><p id="cartCount">0</p><a href="">SHOPPING CART <i class="fa fa-shopping-cart fa-flip-horizontal" style="font-size:32px"></i></a></li>
+                    <li><a id="cart" href="">SHOPPING CART </a><p id="cartCount">0</p></li>
                         
                         <div class="loginForm-popup" id="loginForm">
                             <form action="/action_page.php" class="form-container">
@@ -47,7 +47,7 @@
                                         <label for="fullName"><b>Full Name</b></label>
                                         <input type="text" placeholder="Enter Full Name" name="fullName" required>
                                         <label for="address"><b>Address</b></label>
-                                        <input type="text" placeholder="Enter Home Address" name="address" required>\
+                                        <input type="text" placeholder="Enter Home Address" name="address" required>
                                         <label for="email"><b>Email</b></label>
                                         <input type="text" placeholder="Enter Email" name="email" required>
                                         <button type="submit" class="btn">Register</button>
@@ -66,8 +66,7 @@
                         <div class="aboutUs-popup" id="aboutUs">
                             <div class="container">
                                 <h1>We Are The Wine World</h1>
-                                <p>Wine World specialises in selling brilliant wine. We believe wine – whether you’re buying it or selling it, and especially when you’re drinking it – should be full of fun.
-                                There are plenty of places where you can buy decent wine. What gets us really excited is interesting wine – the wines you taste that are just a little special. They’re difficult to find in the supermarkets but we’ve got hundreds of them for you to explore, and we don’t want you to pay over the odds to find them. Majestic makes interesting affordable, so everyone can enjoy it.</p>
+                                <p>Wine World specialises in selling brilliant wine. We believe wine – whether you’re buying it or selling it, and especially when you’re drinking it – should be full of fun. There are plenty of places where you can buy decent wine. What gets us really excited is interesting wine – the wines you taste that are just a little special. They’re difficult to find in the supermarkets but we’ve got hundreds of them for you to explore, and we don’t want you to pay over the odds to find them. Majestic makes interesting affordable, so everyone can enjoy it.</p>
                                 <button type="button" onclick="location.href = 'contact.html';">Contact</button>
                                 <button type="button" onclick="closeAboutUs()">Close</button>
                             </div>
@@ -81,7 +80,6 @@
         <img src="../img/logo.png" style="width:20%;float:right;box-shadow:none;transform:scaleX(-1);">
         <p id="content">Choose a bottle of wine to add it to your cart</p>
         <div class="search">
-            <form action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search">
                 <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
                 <div class="box">
@@ -95,7 +93,6 @@
                     </select>
                     <p id="sortByPara">Sort By</p>
                 </div>
-            </form>
         </div>
         
         <table>
@@ -104,8 +101,46 @@
                     <h3>Benevolent Neglect</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
+                            
                             <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
+                                
+                                <img src="../img/wines/wine1.png">
+                            </div>
+                            <div class="flip-card-back">
+                                <p id="abv">ABV: 12.10%</p>
+                                <p id="country"> Italy <i class="fa fa-globe" aria-hidden="true"></i></p> 
+                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
+                            </div>
+                                
+                        </div>
+                            
+                    </div>
+                    <h5>Red Wine | £7</h5>
+                    <button onclick="addToCount()">Add To Cart</button>
+                </th>
+                <th>
+                    <h3>Legato</h3>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../img/wines/wine2.png">
+                            </div>
+                            <div class="flip-card-back">
+                                <p id="abv">ABV: 11.20%</p>
+                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
+                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Red Wine | £12</h5>
+                    <button onclick="addToCount()">Add To Cart</button>
+                </th>
+                <th>
+                    <h3>Benevolent Neglect</h3>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../img/wines/wine3.png">
                             </div>
                             <div class="flip-card-back">
                                 <p id="abv">ABV: 14.40%</p>
@@ -114,49 +149,15 @@
                             </div>
                         </div>
                     </div>
-                    <h5>Red Wine | £16</h5>
+                    <h5>Red Wine | £11</h5>
                     <button onclick="addToCount()">Add To Cart</button>
                 </th>
                 <th>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Hazy View</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
-                            </div>
-                            <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
-                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
-                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Red Wine | £16</h5>
-                    <button onclick="addToCount()">Add To Cart</button>
-                </th>
-                <th>
-                    <h3>Benevolent Neglect</h3>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
-                            </div>
-                            <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
-                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
-                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Red Wine | £16</h5>
-                    <button onclick="addToCount()">Add To Cart</button>
-                </th>
-                <th>
-                    <h3>Benevolent Neglect</h3>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
+                                <img src="../img/wines/wine4.png">
                             </div>
                             <div class="flip-card-back">
                                 <p id="abv">ABV: 14.40%</p>
@@ -171,11 +172,115 @@
             </tr> 
             <tr>
                 <td>
+                    <h3>Indaba</h3>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../img/wines/wine5.png">
+                            </div>
+                            <div class="flip-card-back">
+                                <p id="abv">ABV: 11%</p>
+                                <p id="country"> Spain <i class="fa fa-globe" aria-hidden="true"></i></p> 
+                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Red Wine | £12</h5>
+                    <button onclick="addToCount()">Add To Cart</button>
+                </td>
+                <td>
                     <h3>Benevolent Neglect</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
+                                <img src="../img/wines/wine6.png">
+                            </div>
+                            <div class="flip-card-back">
+                                <p id="abv">ABV: 13.40%</p>
+                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
+                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Red Wine | £13</h5>
+                    <button onclick="addToCount()">Add To Cart</button>
+                </td>
+                <td>
+                    <h3>Rouge</h3>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../img/wines/wine7.png">
+                            </div>
+                            <div class="flip-card-back">
+                                <p id="abv">ABV: 14.40%</p>
+                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
+                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Red Wine | £16</h5>
+                    <button onclick="addToCount()">Add To Cart</button>
+                </td>
+                <td>
+                    <h3>Mont Rose</h3>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../img/wines/wine8.png">
+                            </div>
+                            <div class="flip-card-back">
+                                <p id="abv">ABV: 14.40%</p>
+                                <p id="country"> Italy <i class="fa fa-globe" aria-hidden="true"></i></p> 
+                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Red Wine | £16</h5>
+                    <button onclick="addToCount()">Add To Cart</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Benevolent Neglect</h3>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../img/wines/wine9.png">
+                            </div>
+                            <div class="flip-card-back">
+                                <p id="abv">ABV: 14.40%</p>
+                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
+                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Red Wine | £16</h5>
+                    <button onclick="addToCount()">Add To Cart</button>
+                </td>
+                <td>
+                    <h3>Natureo</h3>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../img/wines/wine10.png">
+                            </div>
+                            <div class="flip-card-back">
+                                <p id="abv">ABV: 14.40%</p>
+                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
+                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Red Wine | £16</h5>
+                    <button onclick="addToCount()">Add To Cart</button>
+                </td>
+                <td>
+                    <h3>Montes</h3>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../img/wines/wine11.png">
                             </div>
                             <div class="flip-card-back">
                                 <p id="abv">ABV: 14.40%</p>
@@ -192,41 +297,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
-                            </div>
-                            <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
-                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
-                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Red Wine | £16</h5>
-                    <button onclick="addToCount()">Add To Cart</button>
-                </td>
-                <td>
-                    <h3>Benevolent Neglect</h3>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
-                            </div>
-                            <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
-                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
-                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Red Wine | £16</h5>
-                    <button onclick="addToCount()">Add To Cart</button>
-                </td>
-                <td>
-                    <h3>Benevolent Neglect</h3>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
+                                <img src="../img/wines/wine12.png">
                             </div>
                             <div class="flip-card-back">
                                 <p id="abv">ABV: 14.40%</p>
@@ -245,7 +316,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
+                                <img src="../img/wines/wine13.png">
                             </div>
                             <div class="flip-card-back">
                                 <p id="abv">ABV: 14.40%</p>
@@ -262,7 +333,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
+                                <img src="../img/wines/wine14.png">
                             </div>
                             <div class="flip-card-back">
                                 <p id="abv">ABV: 14.40%</p>
@@ -279,7 +350,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
+                                <img src="../img/wines/wine15.png">
                             </div>
                             <div class="flip-card-back">
                                 <p id="abv">ABV: 14.40%</p>
@@ -296,77 +367,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
-                            </div>
-                            <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
-                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
-                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Red Wine | £16</h5>
-                    <button onclick="addToCount()">Add To Cart</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Benevolent Neglect</h3>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
-                            </div>
-                            <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
-                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
-                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Red Wine | £16</h5>
-                    <button onclick="addToCount()">Add To Cart</button>
-                </td>
-                <td>
-                    <h3>Benevolent Neglect</h3>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
-                            </div>
-                            <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
-                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
-                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Red Wine | £16</h5>
-                    <button onclick="addToCount()">Add To Cart</button>
-                </td>
-                <td>
-                    <h3>Benevolent Neglect</h3>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
-                            </div>
-                            <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
-                                <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
-                                <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Red Wine | £16</h5>
-                    <button onclick="addToCount()">Add To Cart</button>
-                </td>
-                <td>
-                    <h3>Benevolent Neglect</h3>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="../img/wine1.jpg">
+                                <img src="../img/wines/wine16.png">
                             </div>
                             <div class="flip-card-back">
                                 <p id="abv">ABV: 14.40%</p>
@@ -386,5 +387,18 @@
     </body>
     
     <script src="../js/script.js"></script>
+    
+    <script>
+        
+    document.getElementById('searchBtn').onclick =_=>
+{
+  console.log("click");
+    var wine1 = new Wine("Bread & Butter Chardonnay", "White", "12", "Spain", "13", "this wine is the best b;a b;a kocham hehe");
+        console.log(wine1);
+
+}
+    </script>
+    <script src="../js/wineObject.js"></script>
+    <script src="../js/sort.js"></script>
     
 </html>
