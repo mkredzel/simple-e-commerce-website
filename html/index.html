@@ -22,7 +22,7 @@
                     <li><a onclick="openRegisterForm()">REGISTER</a></li>   
                     <li><a onclick="openLoginForm()">LOGIN</a></li>   
                     <li><a href="contact.html">CONTACT</a></li>   
-                    <li><a id="cart" href="">SHOPPING CART </a><p id="cartCount">0</p></li>
+                    <li><a id="cart" onclick="openShoppingCart()">SHOPPING CART </a><p id="cartCount">0</p></li>
                         
                         <div class="loginForm-popup" id="loginForm">
                             <form action="/action_page.php" class="form-container">
@@ -71,6 +71,24 @@
                                 <button type="button" onclick="closeAboutUs()">Close</button>
                             </div>
                         </div>
+
+                        <div class="shoppingCart-popup" id="shoppingCart">
+                            <div class="container">
+                                <h1>Shopping Cart</h1>
+                                <hr>
+                                <p> Wine 1 £12</p>
+                                <p> Wine 2 £7</p>
+                                <p> Wine 3 £6</p>
+                                <p> Wine 4 £15</p>
+                                <p> Wine 5 £12</p>
+                                <p> Wine 6 £11</p>
+                                <hr>
+                                <p> Total price: £66</p>
+
+                                <button type="button" onclick="">Check Out</button>
+                                <button type="button" onclick="closeShoppingCart()">Close</button>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             </nav>
@@ -100,14 +118,12 @@
                 <th>
                     <h3>Benevolent Neglect</h3>
                     <div class="flip-card">
-                        <div class="flip-card-inner">
-                            
-                            <div class="flip-card-front">
-                                
+                        <div class="flip-card-inner">   
+                            <div class="flip-card-front">         
                                 <img src="../img/wines/wine1.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 12.10%</p>
+                                <p id="abv">ABV: 12%</p>
                                 <p id="country"> Italy <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -126,7 +142,7 @@
                                 <img src="../img/wines/wine2.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 11.20%</p>
+                                <p id="abv">ABV: 11%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -143,7 +159,7 @@
                                 <img src="../img/wines/wine3.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -160,7 +176,7 @@
                                 <img src="../img/wines/wine4.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -196,7 +212,7 @@
                                 <img src="../img/wines/wine6.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 13.40%</p>
+                                <p id="abv">ABV: 13%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -213,7 +229,7 @@
                                 <img src="../img/wines/wine7.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -230,7 +246,7 @@
                                 <img src="../img/wines/wine8.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Italy <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -249,7 +265,7 @@
                                 <img src="../img/wines/wine9.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -266,7 +282,7 @@
                                 <img src="../img/wines/wine10.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -283,7 +299,7 @@
                                 <img src="../img/wines/wine11.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -300,7 +316,7 @@
                                 <img src="../img/wines/wine12.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -319,7 +335,7 @@
                                 <img src="../img/wines/wine13.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -336,7 +352,7 @@
                                 <img src="../img/wines/wine14.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -353,7 +369,7 @@
                                 <img src="../img/wines/wine15.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>
@@ -370,7 +386,7 @@
                                 <img src="../img/wines/wine16.png">
                             </div>
                             <div class="flip-card-back">
-                                <p id="abv">ABV: 14.40%</p>
+                                <p id="abv">ABV: 14%</p>
                                 <p id="country"> Portugal <i class="fa fa-globe" aria-hidden="true"></i></p> 
                                 <p id="wineDescription">An invigorating nose of violets, black olives, both fresh and tapenade and sweet loose leaf tea. Squashy mulberries, with a surprisingly lithe, blue and black fruited palate with a dark spiced element - dark chocolate dipped orange peel and pot pourri.</p>
                             </div>

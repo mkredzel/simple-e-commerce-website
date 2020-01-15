@@ -181,6 +181,15 @@ button:hover {
     z-index: 9;
 }
 
+#shoppingCart {
+    display: none;
+    position: absolute;
+    top: 111px;
+    left: 50%;
+    width: 100%
+    z-index: 9;
+}
+
 /* Add styles to the form container */
 .form-container, .container {
     position: relative;
@@ -253,12 +262,18 @@ span {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 1s;
+    
+}
+
+.flip-card:hover {
+    transform: rotateY(180deg);
+    transition: transform 1.5s;
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+.flip-card {
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
 }
 
 .flip-card-front, .flip-card-back {
@@ -273,7 +288,7 @@ span {
 }
 
 .flip-card-back {
-    background-image: url(../img/cardBackground.png);
+    background-image: url(../img/cardBackground.jpg);
     color: white;
     font-weight: bold;
     transform: rotateY(180deg);
