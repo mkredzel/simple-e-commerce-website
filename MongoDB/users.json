@@ -1,0 +1,44 @@
+{
+    "_id" : ObjectId("5e20720b775c6ed1e573f74b"),
+    "full name" : "David Gamez",
+    "address" : "15 Edgware Road, W1 5WE London",
+    "email" : "d.gamez@gmail.com",
+    "telephone" : "07510583758",
+    "password" : "dgamez123"
+}
+
+{
+    "_id" : ObjectId("5e207ea2899369e28ffaf926"),
+    "full name" : "John Frusciante",
+    "address" : "86 Ruskin Avenue, BN1 1AX Brighton",
+    "email" : "j.fru553@hotmail.com",
+    "telephone" : "07510583222",
+    "password" : "rhcplove"
+}
+
+{
+    "_id" : ObjectId("5e207ea6899369e28ffaf92e"),
+    "full name" : "Christian Nalewako",
+    "address" : "15 Setchell Way, SE1 5TE London",
+    "email" : "chrisnaw9696@yahoo.co.uk",
+    "telephone" : "07589615658",
+    "password" : "chris123"
+}
+
+{
+    "_id" : ObjectId("5e207ec1899369e28ffaf93a"),
+    "full name" : "Marcel Evans",
+    "address" : "22 Edgware Road, W1 5WE London",
+    "email" : "marcel.evans@gmail.com",
+    "telephone" : "07510386758",
+    "password" : "ilovecats"
+}
+
+{
+    "_id" : ObjectId("5e20af9fdaf4ac7d0071421b"),
+    "full name" : "",
+    "address" : "",
+    "email" : "admin",
+    "telephone" : "",
+    "password" : "admin"
+}
