@@ -1,0 +1,47 @@
+{
+    "_id" : ObjectId("5e207c72899369e28ffaf7a2"),
+    "full name" : "David Gamez",
+    "address" : "22 Edgware Road, W1 6YT London",
+    "telephone" : "07519174721",
+    "products" : [ 
+        "Nero D'Avola", 
+        "Pinotage", 
+        "Merlot"
+    ]
+}
+
+{
+    "_id" : ObjectId("5e207ff8899369e28ffaf9fd"),
+    "full name" : "Tom Yorke",
+    "address" : "22 Edgware Road, W1 6YT London",
+    "telephone" : "07558172727",
+    "products" : [ 
+        "Carbarnet Sauvignon"
+    ]
+}
+
+{
+    "_id" : ObjectId("5e207ffb899369e28ffafa03"),
+    "full name" : "Anthony Evans",
+    "address" : "22 Old Kent Road, SE1 6YT London",
+    "telephone" : "07511172807",
+    "products" : [ 
+        "Merlot di Venezie", 
+        "Nero D'Avola", 
+        "Santo Isidro"
+    ]
+}
+
+{
+    "_id" : ObjectId("5e207ffe899369e28ffafa07"),
+    "full name" : "John Frusciante",
+    "address" : "62 Setchell Way, SE1 5YT London",
+    "telephone" : "07559982421",
+    "products" : [ 
+        "Merlot", 
+        "Pinotage", 
+        "Merlot", 
+        "Feudi D'Albe", 
+        "Il Banchetto Rosso"
+    ]
+}
