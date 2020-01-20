@@ -153,14 +153,12 @@ button:hover {
     border-radius: 35px;
 }
 
-/* The popup form - hidden by default */
 .loginForm-popup {
     display: none;
     position: absolute;
     width: 450px;
     top: 111px;
     left: 50%;
-    z-index: 9;
 }
 
 .registerForm-popup {
@@ -168,8 +166,13 @@ button:hover {
     position: absolute;
     top: 111px;
     left: 50%;
-    width: 100%
-    z-index: 9;
+}
+
+.checkOutForm-popup {
+    display: none;
+    position: absolute;
+    top: 111px;
+    left: 50%;
 }
 
 #aboutUs {
@@ -177,8 +180,14 @@ button:hover {
     position: absolute;
     top: 111px;
     left: 50%;
-    width: 100%
-    z-index: 9;
+}
+
+#confirmation {
+    display: none;
+    position: absolute;
+    top: 111px;
+    left: 50%;
+    width: 500px;
 }
 
 #shoppingCart {
@@ -186,8 +195,6 @@ button:hover {
     position: absolute;
     top: 111px;
     left: 50%;
-    width: 100%
-    z-index: 9;
 }
 
 /* Add styles to the form container */
@@ -423,4 +430,54 @@ span {
 #cart:after {
     content: "\f07a";
     font-family: FontAwesome;
+}
+
+#term, #term:hover {
+    position: relative;
+    bottom: 50px;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+}
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 1px;
+    border: 2px solid #1F2026;
+    border-radius: 3px;
+    background-color: white;
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 13px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 9px;
+    left: 7px;
+}
+
+.cmsTable {
+    border: solid black;
+    width: 75%;
+    margin-left:auto; 
+    margin-right:auto;
+    position: relative;
+    top: 450px;
+}
+
+.cmsTable th {
+    border: solid black;
+    text-align: center;
 }

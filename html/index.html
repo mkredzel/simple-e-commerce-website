@@ -42,6 +42,7 @@
                             <form action="/action_page.php" class="form-container">
                                 <h1>Register</h1>
                                 <p>Please fill in this form to create an account.</p>
+                                <hr>
                                 <div class="row">
                                     <div class="column">
                                         <label for="fullName"><b>Full Name</b></label>
@@ -54,14 +55,18 @@
                                     </div>
                                     <div class="column">
                                         <label for="telephone"><b>Telephone</b></label>
-                                        <input type="text" placeholder="Enter Telephone Number" name="telephone" required><label for="psw"><b>Password</b></label>
-                                        <input type="password" placeholder="Enter Password" name="psw" required><label for="psw-repeat"><b>Repeat Password</b></label>
+                                        <input type="text" placeholder="Enter Telephone Number" name="telephone" required>
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="psw" required>
+                                        <label for="psw-repeat"><b>Repeat Password</b></label>
                                         <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
                                         <button type="button" class="btn cancel" onclick="closeRegisterForm()">Close</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
+
+                        
                         
                         <div class="aboutUs-popup" id="aboutUs">
                             <div class="container">
@@ -85,15 +90,50 @@
                                 <hr>
                                 <p> Total price: £66</p>
 
-                                <button type="button" onclick="">Check Out</button>
+                                <button type="button" onclick="openCheckOut()">Check Out</button>
                                 <button type="button" onclick="">Clear Cart</button>
                                 <button type="button" onclick="closeShoppingCart()">Close</button>
                             </div>
+                        </div>
+
+                        <div class="checkOutForm-popup" id="checkOutForm">
+                            <form action="/action_page.php" class="form-container">
+                                <h1>Check Out</h1>
+                                <p>Please fill in this form for check out.</p>
+                                <hr>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="fullName"><b>Full Name</b></label>
+                                        <input type="text" placeholder="Enter Full Name" name="fullName" required>
+                                        <label for="address"><b>Shipping Address</b></label>
+                                        <input type="text" placeholder="Enter Shipping Address" name="address" required>
+                                    </div>
+                                    <div class="column">
+                                        <label for="email"><b>Email</b></label>
+                                        <input type="text" placeholder="Enter Email" name="email" required>
+                                        <label for="telephone"><b>Telephone</b></label>
+                                        <input type="text" placeholder="Enter Telephone Number" name="telephone" required>
+                                    </div>
+                                </div>
+                                <label id="term">Are you at least 18 years old? <input type="checkbox" id="toggle"/></label>
+                                    <button type="submit" class="btn" onclick="confirmation()">Check Out</button>
+                                    <button type="button" class="btn cancel" onclick="closeCheckOut()">Close</button>
+                            </form>
+                        </div>
+                        <div id="confirmation">
+                            <div class="container">
+                            <h1>Thank you for shopping with us!</h1>
+                            <h2>Your confirmation # 123412412</h2>
+                            <button type="button" class="btn cancel" onclick="closeConfirmation()">Close</button>
+                        </div>
+                        </div>
                         </div>
                     </ul>
                 </div>
             </nav>
         </header>
+
+        
         
         <img src="../img/logo.png" style="width:20%;float:left;box-shadow:none;">
         <img src="../img/logo.png" style="width:20%;float:right;box-shadow:none;transform:scaleX(-1);">
@@ -107,8 +147,10 @@
                         <option value="2">White Wine</option>
                         <option value="3">Rose Wine</option>
                         <option value="4">Red Wine</option>
-                        <option value="5">Price: Low To High</option>
-                        <option value="6">Price: High To Low</option>
+                        <option value="5">ABV: Low To High</option>
+                        <option value="6">ABV: High To Low</option>
+                        <option value="7">Price: Low To High</option>
+                        <option value="8">Price: High To Low</option>
                     </select>
                     <p id="sortByPara">Sort By</p>
                 </div>
@@ -117,7 +159,7 @@
         <table>
             <tr>
                 <th>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Il Banchetto Rosso</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">   
                             <div class="flip-card-front">         
@@ -153,7 +195,7 @@
                     <button onclick="addToCount()">Add To Cart</button>
                 </th>
                 <th>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Pinotage</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -166,11 +208,11 @@
                             </div>
                         </div>
                     </div>
-                    <h5>Red Wine | £11</h5>
+                    <h5>White Wine | £11</h5>
                     <button onclick="addToCount()">Add To Cart</button>
                 </th>
                 <th>
-                    <h3>Hazy View</h3>
+                    <h3>Pinotage Black</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -189,7 +231,7 @@
             </tr> 
             <tr>
                 <td>
-                    <h3>Indaba</h3>
+                    <h3>Merlot</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -206,7 +248,7 @@
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
                 <td>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Nero D'Avola</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -219,11 +261,11 @@
                             </div>
                         </div>
                     </div>
-                    <h5>Red Wine | £13</h5>
+                    <h5>Rose Wine | £13</h5>
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
                 <td>
-                    <h3>Rouge</h3>
+                    <h3>Jacques Rouge</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -240,7 +282,7 @@
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
                 <td>
-                    <h3>Mont Rose</h3>
+                    <h3>Monterose</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -253,13 +295,13 @@
                             </div>
                         </div>
                     </div>
-                    <h5>Red Wine | £16</h5>
+                    <h5>White Wine | £16</h5>
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Feudi D'Albe</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -272,11 +314,11 @@
                             </div>
                         </div>
                     </div>
-                    <h5>Red Wine | £16</h5>
+                    <h5>Rose Wine | £16</h5>
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
                 <td>
-                    <h3>Natureo</h3>
+                    <h3>Natureo Red</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -289,11 +331,11 @@
                             </div>
                         </div>
                     </div>
-                    <h5>Red Wine | £16</h5>
+                    <h5>Rose Wine | £16</h5>
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
                 <td>
-                    <h3>Montes</h3>
+                    <h3>Vin La Cadence</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -306,11 +348,11 @@
                             </div>
                         </div>
                     </div>
-                    <h5>Red Wine | £16</h5>
+                    <h5>Rose Wine | £16</h5>
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
                 <td>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Molino Loco</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -329,7 +371,7 @@
             </tr>
             <tr>
                 <td>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Berton Shiraz</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -346,7 +388,7 @@
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
                 <td>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Carbarnet Sauvignon</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -363,7 +405,7 @@
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
                 <td>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Merlot di Venezie</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -380,7 +422,7 @@
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
                 <td>
-                    <h3>Benevolent Neglect</h3>
+                    <h3>Santo Isidro</h3>
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -393,7 +435,7 @@
                             </div>
                         </div>
                     </div>
-                    <h5>Red Wine | £16</h5>
+                    <h5>White Wine | £16</h5>
                     <button onclick="addToCount()">Add To Cart</button>
                 </td>
             </tr>
