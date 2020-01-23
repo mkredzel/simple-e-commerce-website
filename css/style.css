@@ -107,17 +107,25 @@ h1 {
 
 #footer {
     font-size: 32px;
-    color: #A5BED3;
-    padding: 16px 20px;
+    text-align: center;
+    position: relative;
+    top:45px;
+}
+
+#cRight {
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    bottom:35px;
 }
 
 footer {
+    color: white;
+    font-size: 20px;
 	position: relative;
-	bottom: 0%;
+	bottom: -35px;
 	width: 100%;
-    height: 75px;
-    margin-bottom: -50px;
-	text-align: center;
+    height: 120px;
     background: #1F2026;
     font-family: 'Alegreya Sans SC';
 }
@@ -367,7 +375,7 @@ span {
 
 #msg {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 48px;
@@ -474,10 +482,81 @@ input[type=checkbox]:checked:after {
     margin-left:auto; 
     margin-right:auto;
     position: relative;
-    top: 450px;
+    top: 350px;
 }
 
 .cmsTable th {
     border: solid black;
     text-align: center;
+    height: 50px;
+    width: 70em;
 }
+
+.cmsTable tr:hover {
+    background-color: #f5f5f5;
+}
+
+#cmsInput {
+    border: solid #1F2026 3px;  
+    padding: 19px; 
+    font-size: 18px;
+}
+
+#txtField {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cmsBtn {
+    margin-left: 10px;
+}
+
+footer .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+footer .fa:hover {
+      background-color: white;
+      color:black;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+footer a {
+      float: right;
+      position: relative;
+      bottom: 50px;
+      right: 40px;
+  }
+  
