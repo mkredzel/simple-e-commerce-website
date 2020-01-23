@@ -1,3 +1,7 @@
+//===============================================
+// DISPLAY GOOGLE MAPS WITH ULURU
+//===============================================
+
 function initMap() {
     // The location of Uluru
     var uluru = {lat: 51.5901, lng: 0.22897};

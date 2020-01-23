@@ -12,7 +12,11 @@
     </head>
     
     <body>
+
+        <!-- Header -->
         <header>
+
+            <!-- Navigation bar -->
             <nav>
                 <div id="nav">
                     <ul>
@@ -22,7 +26,8 @@
                     <li><a onclick="openLoginForm()">LOGIN</a></li>   
                     <li><a href="contact.html">CONTACT</a></li>   
                     <li><a id="cart" onclick="openShoppingCart()">SHOPPING CART </a><p id="cartCount">0</p></li>
-                        
+
+                        <!-- Login popup -->
                         <div class="loginForm-popup" id="loginForm">
                             <form action="/action_page.php" class="form-container">
                                 <h1>Login</h1>
@@ -36,7 +41,8 @@
                                 <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
                             </form>
                         </div>
-                        
+
+                        <!-- Register popup -->
                         <div class="registerForm-popup" id="registerForm">
                             <form action="/action_page.php" class="form-container">
                                 <h1>Register</h1>
@@ -65,8 +71,7 @@
                             </form>
                         </div>
 
-                        
-                        
+                        <!-- About us popup -->
                         <div class="aboutUs-popup" id="aboutUs">
                             <div class="container">
                                 <h1>We Are The Wine World</h1>
@@ -76,6 +81,7 @@
                             </div>
                         </div>
 
+                        <!-- Shopping cart popup -->
                         <div class="shoppingCart-popup" id="shoppingCart">
                             <div class="container">
                                 <h1>Shopping Cart</h1>
@@ -95,8 +101,9 @@
                             </div>
                         </div>
 
+                        <!-- Check out popup -->
                         <div class="checkOutForm-popup" id="checkOutForm">
-                            <form action="/action_page.php" class="form-container">
+                            <form action="" class="form-container">
                                 <h1>Check Out</h1>
                                 <p>Please fill in this form for check out.</p>
                                 <hr>
@@ -119,16 +126,30 @@
                                     <button type="button" class="btn cancel" onclick="closeCheckOut()">Close</button>
                             </form>
                         </div>
+
+                        <!-- Confirmation popup -->
+                        <div id="confirmation">
+                            <div class="container">
+                            <h1>Thank you for shopping with us!</h1>
+                            <h2>Your confirmation # 123412412</h2>
+                            <button type="button" class="btn cancel" onclick="closeConfirmation()">Close</button>
+                        </div>
                     </ul>
                 </div>
             </nav>
         </header>
+        
+        <!-- Google maps -->
         <div id="map"></div>
+
+        <!-- Contact information -->
         <div id="contact">
             <p><span>Phone</span> 0207 402 4141</p>
             <p><span>Email</span> customerservice@wineworld.co.uk</p>
             <p><span>Address</span> Wine World, 225 Edgware Rd, Paddington, London W2 1JU</p>
         </div>
+
+        <!-- Footer -->
         <footer>
             <p id="footer"> We love what we do, we love wine... </p>
             <p id="cRight">Copyright © 2020 Wine World </p>

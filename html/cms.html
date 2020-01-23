@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Wine World</title>
-        
         <link rel="icon" href="../img/favicon.ico">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,10 +10,12 @@
     </head>
     
     <body>
+        <!-- Header -->
         <header>
             <div id="cmsHeader">Welcome To Content Management System</div>
         </header>
         
+        <!-- Combo Box with options -->
         <div class="box">
             <select id="choice" onchange="checkSelection();">
                 <option value="1">View all listed products</option>
@@ -25,6 +26,8 @@
                 <option value="6">Delete customer order</option>
             </select>
         </div>
+        
+        <!-- Message to be displayed -->
         <div id="displayInfo">
         <p id="msg">You selected to view all listed products</p>
         <table class="cmsTable" id="tableCms"><tr><th>#</th><th>Name</th><th>Type</th><th>Price</th><th>Country</th><th>ABV</th><th>Description</th><th>Image</th><th>Stock Count</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></tr></table>

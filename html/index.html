@@ -13,7 +13,11 @@
     </head>
     
     <body>
+
+        <!-- Header -->
         <header>
+
+            <!-- Navigation bar -->
             <nav>
                 <div id="nav">
                     <ul>
@@ -24,6 +28,7 @@
                     <li><a href="contact.html">CONTACT</a></li>   
                     <li><a id="cart" onclick="openShoppingCart()">SHOPPING CART </a><p id="cartCount">0</p></li>
                         
+                        <!-- Login popup -->
                         <div class="loginForm-popup" id="loginForm">
                             <form action="/action_page.php" class="form-container">
                                 <h1>Login</h1>
@@ -38,6 +43,7 @@
                             </form>
                         </div>
                         
+                        <!-- Register popup -->
                         <div class="registerForm-popup" id="registerForm">
                             <form action="/action_page.php" class="form-container">
                                 <h1>Register</h1>
@@ -67,7 +73,7 @@
                         </div>
 
                         
-                        
+                        <!-- About us popup -->
                         <div class="aboutUs-popup" id="aboutUs">
                             <div class="container">
                                 <h1>We Are The Wine World</h1>
@@ -77,6 +83,7 @@
                             </div>
                         </div>
 
+                        <!-- Shopping cart popup -->
                         <div class="shoppingCart-popup" id="shoppingCart">
                             <div class="container">
                                 <h1>Shopping Cart</h1>
@@ -96,6 +103,7 @@
                             </div>
                         </div>
 
+                        <!-- Check out popup -->
                         <div class="checkOutForm-popup" id="checkOutForm">
                             <form action="/action_page.php" class="form-container">
                                 <h1>Check Out</h1>
@@ -120,6 +128,8 @@
                                     <button type="button" class="btn cancel" onclick="closeCheckOut()">Close</button>
                             </form>
                         </div>
+
+                        <!-- Confirmation popup -->
                         <div id="confirmation">
                             <div class="container">
                             <h1>Thank you for shopping with us!</h1>
@@ -133,14 +143,19 @@
             </nav>
         </header>
 
-        
-        
+        <!-- Wine spillage images -->
         <img src="../img/logo.png" style="width:20%;float:left;box-shadow:none;">
         <img src="../img/logo.png" style="width:20%;float:right;box-shadow:none;transform:scaleX(-1);">
+        
+        <!-- Home page text -->
         <p id="content">Choose a bottle of wine to add it to your cart</p>
+
+        <!-- Search text field and a button -->
         <div class="search">
                 <input type="text" placeholder="Search.." name="search">
                 <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                
+                <!-- Sort by combo box -->
                 <div class="box">
                     <select id="sortBy" onchange="">
                         <option value="1">Featured</option>
@@ -156,6 +171,7 @@
                 </div>
         </div>
         
+        <!-- Table with all the flip cards, paragraphs and buttons -->
         <table>
             <tr>
                 <th>
@@ -440,6 +456,8 @@
                 </td>
             </tr>
         </table>
+
+        <!-- Footer -->
         <footer>
             <p id="footer"> We love what we do, we love wine... </p>
             <p id="cRight">Copyright © 2020 Wine World </p>
@@ -453,14 +471,14 @@
     
     <script src="../js/script.js"></script>
     
+    <!-- Sample wine object creation -->
     <script>
-        
-    document.getElementById('searchBtn').onclick =_=>
-{
-  console.log("click");
-    var wine1 = new Wine("Bread & Butter Chardonnay", "White", "12", "Spain", "13", "this wine is the best b;a b;a kocham hehe", "img/wine1.png");
-        console.log(wine1);
 
+    document.getElementById('searchBtn').onclick =_=> {
+        console.log("click");
+
+        var wine1 = new Wine("Bread & Butter Chardonnay", "White", "12", "Spain", "13", "this wine is the best b;a b;a kocham hehe", "img/wine1.png");
+        console.log(wine1);
 }
     </script>
     <script src="../js/wineObject.js"></script>

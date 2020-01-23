@@ -1,3 +1,7 @@
+//=================================
+// SAMPLE WINE OBJECT CONSTRUCTOR
+//=================================
+
 function Wine(name, type, price, country, abv, description, image) {
     this.wineName = name;
     this.wineType = type;
