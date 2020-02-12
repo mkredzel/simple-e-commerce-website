@@ -12,7 +12,7 @@ $mongoClient = (new MongoDB\Client);
 //Select a database
 $db = $mongoClient->Ecommerce;
 
-//Find all of the customers that match this criteria
+//Find all of the products that match this criteria
 $cursor = $db->products->find([], ['sort' => [$criteria => $value]]);
 
 $result = "";

@@ -114,6 +114,7 @@ h1 {
   margin-left: 20px;
   position: relative;
   bottom: 35px;
+  font-size: 20px;
 }
 
 footer {
@@ -599,8 +600,19 @@ input[type="checkbox"]:checked:after {
   margin-top: 100px;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  min-width: 1200px;
+  min-width: 1300px;
   align-content: space-evenly;
   justify-content: space-around;
   text-align: center;
+}
+
+#searchFailure {
+  color: #f26;
+  text-align: center;
+  font-size: 40px;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
 }

@@ -72,13 +72,12 @@
                             </form>
                         </div>
 
-                        
                         <!-- About us popup -->
                         <div class="aboutUs-popup" id="aboutUs">
                             <div class="container">
                                 <h1>We Are The Wine World</h1>
                                 <p>Wine World specialises in selling brilliant wine. We believe wine – whether you’re buying it or selling it, and especially when you’re drinking it – should be full of fun. There are plenty of places where you can buy decent wine. What gets us really excited is interesting wine – the wines you taste that are just a little special. They’re difficult to find in the supermarkets but we’ve got hundreds of them for you to explore, and we don’t want you to pay over the odds to find them. Majestic makes interesting affordable, so everyone can enjoy it.</p>
-                                <button type="button" onclick="location.href = 'contact.html';">Contact</button>
+                                <button type="button" onclick="location.href = '/html/contact.html';">Contact</button>
                                 <button type="button" onclick="closeAboutUs()">Close</button>
                             </div>
                         </div>
@@ -152,8 +151,8 @@
 
         <!-- Search text field and a button -->
         <div class="search">
-                <input type="text" placeholder="Search.." name="search">
-                <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                <input id="searchInput" type="text" placeholder="Search.." name="search">
+                <button id="searchBtn" type="submit" onclick="search()"><i class="fa fa-search"></i></button>
                 
                 <!-- Sort by combo box -->
                 <div class="box">
@@ -181,7 +180,7 @@
         </div>
 
         <!-- Footer -->
-        <footer>
+        <footer id="footer">
             <p id="footer"> We love what we do, we love wine... </p>
             <p id="cRight">Copyright © 2020 Wine World </p>
             <a href="#" class="fa fa-facebook"></a>
