@@ -1,581 +1,606 @@
-
 /* Header with navigation bar */
 header {
-    position: sticky;
-    text-align: center;
-    width:100%;
-    top: 0%;
-    background-color: #1F2026;
-    min-height:100px;
-    z-index: 9;
+  position: sticky;
+  text-align: center;
+  width: 100%;
+  top: 0%;
+  background-color: #1f2026;
+  min-height: 100px;
+  z-index: 9;
 }
 
 /* Body default */
 body {
-    margin:0px;
-    padding:0px;
-    font-family: 'Sofia';
-    font-size: 26px;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Sofia";
+  font-size: 26px;
 }
 
 /* Background picture */
 html {
-    background-image: url(../img/background.jpg);
-    background-position: center;
-    background-size: cover;
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 /* Navigation bar specification with hover */
 #nav {
-    text-align:center;
-    position: absolute;
-    width: 100%;
-    margin-top: -15px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  margin-top: -15px;
 }
 
 li {
   font-size: 24px;
-  font-family: 'Alegreya Sans SC';
-  display:inline-block;
-  position:relative;
-  height:70px;
-  cursor:pointer;
+  font-family: "Alegreya Sans SC";
+  display: inline-block;
+  position: relative;
+  height: 70px;
+  cursor: pointer;
 }
 
 li:hover {
-  background:#947;
+  background: #947;
 }
 
-li:before,li:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:4px;
-  width:0;
+li:before,
+li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 4px;
+  width: 0;
   background: black;
-  transition:400ms ease all;
+  transition: 400ms ease all;
 }
 
-li:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
+li:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
 }
 
-li:hover:before,li:hover:after {
-  width:100%;
-  transition:800ms ease all;
+li:hover:before,
+li:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
   color: white;
 }
 
 li a {
-    position: relative;
-    top: 30%;
-    color: #f26;
-    font-weight: bold;
-    text-decoration:none;
-    padding: 20px;
+  position: relative;
+  top: 30%;
+  color: #f26;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
 }
 
 li a:hover {
-    color: white;
+  color: white;
 }
 
 label {
-    font-size: 26px;
-    font-family: 'Sofia';
+  font-size: 26px;
+  font-family: "Sofia";
 }
 
 /* Paragraph on the top center of the page */
 #content {
-    color: black;
-    font-size: 38px;
-    text-align:center;
+  color: black;
+  font-size: 38px;
+  text-align: center;
 }
 
 h1 {
-    font-size: 32px;
-    font-family: 'Sofia';
+  font-size: 32px;
+  font-family: "Sofia";
 }
 
 /* Footer */
 #footer {
-    font-size: 32px;
-    text-align: center;
-    position: relative;
-    top:45px;
+  font-size: 32px;
+  text-align: center;
+  position: relative;
+  top: 45px;
 }
 
 #cRight {
-    float: left;
-    margin-left: 20px;
-    position: relative;
-    bottom:35px;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  bottom: 35px;
 }
 
 footer {
-    color: white;
-    font-size: 20px;
-	position: relative;
-	bottom: -35px;
-	width: 100%;
-    height: 120px;
-    background: #1F2026;
-    font-family: 'Alegreya Sans SC';
+  color: white;
+  font-size: 20px;
+  position: relative;
+  bottom: -35px;
+  width: 100%;
+  height: 120px;
+  background: #1f2026;
+  font-family: "Alegreya Sans SC";
 }
 
 /* Footer social media icons */
 footer .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
-  
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
 footer .fa:hover {
-    background-color: white;
-    color:black;
-  }
-  
+  background-color: white;
+  color: black;
+}
+
 .fa-facebook {
-    background: #3B5998;
-    color: white;
+  background: #3b5998;
+  color: white;
 }
-  
+
 .fa-twitter {
-    background: #55ACEE;
-    color: white;
+  background: #55acee;
+  color: white;
 }
-  
+
 .fa-google {
-    background: #dd4b39;
-    color: white;
+  background: #dd4b39;
+  color: white;
 }
-  
+
 .fa-linkedin {
-    background: #007bb5;
-    color: white;
+  background: #007bb5;
+  color: white;
 }
-  
+
 .fa-youtube {
-    background: #bb0000;
-    color: white;
+  background: #bb0000;
+  color: white;
 }
 
 footer a {
-    float: right;
-    position: relative;
-    bottom: 50px;
-    right: 40px;
+  float: right;
+  position: relative;
+  bottom: 50px;
+  right: 40px;
 }
 
 /* Table to display products */
 table {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    top: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  top: 20px;
 }
 
 th {
-    font-weight: normal;
-    width: 25%;
+  font-weight: normal;
+  width: 25%;
 }
 
-button{
-    padding: 12px 24px;
-    text-decoration: none;
-    font-weight: bold;
-    transition-duration: 0.5s;
-    background-color: white;
-    color: black;
-    border: 3px solid #1F2026;
-    cursor: pointer;
-    font-family: 'Sofia';
-    font-size: 22px;
+button {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  transition-duration: 0.5s;
+  background-color: white;
+  color: black;
+  border: 3px solid #1f2026;
+  cursor: pointer;
+  font-family: "Sofia";
+  font-size: 22px;
 }
 
 button:hover {
-    background-color: #1F2026;
-    color: white;
-    border-radius: 35px;
+  background-color: #1f2026;
+  color: white;
+  border-radius: 35px;
 }
 
 /* Popup windows */
 .loginForm-popup {
-    display: none;
-    position: absolute;
-    width: 450px;
-    top: 111px;
-    left: 50%;
+  display: none;
+  position: absolute;
+  width: 450px;
+  top: 111px;
+  left: 50%;
 }
 
 .registerForm-popup {
-    display: none;
-    position: absolute;
-    top: 111px;
-    left: 50%;
+  display: none;
+  position: absolute;
+  top: 111px;
+  left: 50%;
 }
 
 .checkOutForm-popup {
-    display: none;
-    position: absolute;
-    top: 111px;
-    left: 50%;
+  display: none;
+  position: absolute;
+  top: 111px;
+  left: 50%;
 }
 
 .column {
-    float: left;
-    width: 45%;
-    padding: 10px;
-    height: 300px;
+  float: left;
+  width: 45%;
+  padding: 10px;
+  height: 300px;
 }
 
 #aboutUs {
-    display: none;
-    position: absolute;
-    top: 111px;
-    left: 50%;
+  display: none;
+  position: absolute;
+  top: 111px;
+  left: 50%;
 }
 
 /* Confirmation popup */
 #confirmation {
-    display: none;
-    position: absolute;
-    top: 111px;
-    left: 50%;
-    width: 500px;
+  display: none;
+  position: absolute;
+  top: 111px;
+  left: 50%;
+  width: 500px;
 }
 
 #shoppingCart {
-    display: none;
-    position: absolute;
-    top: 111px;
-    left: 50%;
+  display: none;
+  position: absolute;
+  top: 111px;
+  left: 50%;
 }
 
 /* Add styles to the form container */
-.form-container, .container {
-    position: relative;
-    left: -50%;
-    padding: 5px;
-    background-color: #ececec;
-    border: 4px solid #1F2026;
-    font: bold 16px Sofia Black;
+.form-container,
+.container {
+  position: relative;
+  left: -50%;
+  padding: 5px;
+  background-color: #ececec;
+  border: 4px solid #1f2026;
+  font: bold 16px Sofia Black;
 }
 
 .form-container {
-    min-height: 600px;
+  min-height: 600px;
 }
 
 /* Inputs for popups */
-.form-container input[type=text], .form-container input[type=password] {
-    width: 80%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: 2px solid #1F2026;
-    background: white;
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: 2px solid #1f2026;
+  background: white;
 }
 
 /* Buttons for popups */
 .form-container .btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 90%;
-    margin-bottom:10px;
-    opacity: 0.8;
+  background-color: #4caf50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  margin-bottom: 10px;
+  opacity: 0.8;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-    background-color: darkred;
+  background-color: darkred;
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-    opacity: 1;
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
 }
 
 /* Google Map */
 #map {
-    height: 400px;
-    width: 100%; 
+  height: 400px;
+  width: 100%;
 }
 
 /* Contact information */
 #contact {
-    font-size: 36px;
-    text-align: center;
-    margin-top: 60px;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 60px;
 }
 
 span {
-    color: dodgerblue;
-    font-weight: bold;
+  color: dodgerblue;
+  font-weight: bold;
 }
-
 
 /* Flip cards, images with hover effect */
 img {
-    box-shadow: 5px 6px 12px 5px #1F2026,5px 6px 11px 4px #1F2026;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
+  box-shadow: 5px 6px 12px 5px #1f2026, 5px 6px 11px 4px #1f2026;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
 
 .flip-card {
-    background-color: transparent;
-    width: 250px;
-    height: 250px;
-    margin: auto;
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  margin: auto;
 }
 
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .flip-card:hover {
-    transform: rotateY(180deg);
-    transition: transform 1s;
-    transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
 .flip-card {
-    transition: transform 1s;
-    transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
 .flip-card-front {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .flip-card-back {
-    background-image: url(../img/cardBackground.jpg);
-    color: white;
-    font-weight: bold;
-    transform: rotateY(180deg);
-    box-shadow: 5px 6px 12px 5px #1F2026,5px 6px 11px 4px #1F2026;
+  background-image: url(../img/cardBackground.jpg);
+  color: white;
+  font-weight: bold;
+  transform: rotateY(180deg);
+  box-shadow: 5px 6px 12px 5px #1f2026, 5px 6px 11px 4px #1f2026;
 }
 
 /* Content of flip cards */
 #abv {
-    position: relative;
-    bottom: 10px;
-    font-size: 18px;
-    margin-left: 100px;
-    display: block;
+  position: relative;
+  bottom: 10px;
+  font-size: 18px;
+  margin-left: 120px;
+  display: block;
 }
 
 #country {
-    position: relative;
-    bottom: 55px;
-    font-size: 18px;
-    margin-right: 140px;
+  position: relative;
+  bottom: 55px;
+  font-size: 18px;
+  margin-right: 120px;
 }
 
 #wineDescription {
-    position: relative;
-    bottom: 50px;
-    font-size: 16px;
-    text-align: center;
-    margin: 10px;
-    font-family: 'Alegreya Sans SC';
+  position: relative;
+  bottom: 50px;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px;
+  font-family: "Alegreya Sans SC";
 }
 
 .box {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .box select {
-    background-color: #1F2026;
-    color: white;
-    padding: 12px;
-    width: 350px;
-    border: none;
-    font-size: 20px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: #1f2026;
+  color: white;
+  padding: 12px;
+  width: 350px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* Sorting combo box */
 #sortBy {
-    position: absolute;
-    top: 27px;
-    left: 125px;
-    width: 225px;
-    height: 45px;
-    padding: 4px;
-    font-size: 23px;
+  position: absolute;
+  top: 27px;
+  left: 125px;
+  width: 225px;
+  height: 45px;
+  padding: 4px;
+  font-size: 23px;
 }
 
 #sortByPara {
-    position: absolute;
-    top: -45px;
-    left: 180px;
-    width: 150px;
-    height: 37px;
-    padding: 2px;
-    font-size: 28px;
+  position: absolute;
+  top: -45px;
+  left: 180px;
+  width: 150px;
+  height: 37px;
+  padding: 2px;
+  font-size: 28px;
 }
 
 /* Search text field and button */
 .search {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#searchBtn  {
-    position: absolute;
-    left: 275px;
-    bottom:0px;
-    font-size: 23px;
-    padding: 4px 6px;
-    border-radius: 4px;
-    border: 2px solid #1F2026;
+#searchBtn {
+  position: absolute;
+  left: 275px;
+  bottom: 0px;
+  font-size: 23px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 2px solid #1f2026;
 }
 
-.search input[type=text] {
-    padding: 8px;
-    border: none;
-    margin-top: 45px;
-    margin-right: 120px;
-    font-size: 24px;
-    border: 2px solid #1F2026;
-    border-radius: 4px;
+.search input[type="text"] {
+  padding: 8px;
+  border: none;
+  margin-top: 45px;
+  margin-right: 120px;
+  font-size: 24px;
+  border: 2px solid #1f2026;
+  border-radius: 4px;
 }
 
 /* Cart counter */
-#cartCount{
-    float: right;
-    color: white;
-    font-family: 'Alegreya Sans SC';
-    border-radius: 15px;
-    border: 2px solid #fd0e35;
-    font-size: 12px;
-    background: #f26;
-    position: relative;
-    left: -20px;
+#cartCount {
+  float: right;
+  color: white;
+  font-family: "Alegreya Sans SC";
+  border-radius: 15px;
+  border: 2px solid #fd0e35;
+  font-size: 12px;
+  background: #f26;
+  position: relative;
+  left: -20px;
 }
 
 #cart:after {
-    content: "\f07a";
-    font-family: FontAwesome;
+  content: "\f07a";
+  font-family: FontAwesome;
 }
 
 /* "18+ policy text" and check box */
-#term, #term:hover {
-    position: relative;
-    bottom: 50px;
-    cursor: pointer;
+#term,
+#term:hover {
+  position: relative;
+  bottom: 50px;
+  cursor: pointer;
 }
 
-input[type=checkbox] {
-    position: relative;
-    cursor: pointer;
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
 }
 
-input[type=checkbox]:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    bottom: 1px;
-    border: 2px solid #1F2026;
-    border-radius: 3px;
-    background-color: white;
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 1px;
+  border: 2px solid #1f2026;
+  border-radius: 3px;
+  background-color: white;
 }
 
-input[type=checkbox]:checked:after {
-    content: "";
-    display: block;
-    width: 8px;
-    height: 13px;
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    bottom: 9px;
-    left: 7px;
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 13px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: 9px;
+  left: 7px;
 }
 
 /* Header for cms */
-#cmsHeader{
-    font-size: 46px;
-    color: white;
-    text-align: center;
+#cmsHeader {
+  font-size: 46px;
+  color: white;
+  text-align: center;
 }
 
 /* Cms */
 .cmsTable {
-    border: solid black;
-    width: 75%;
-    margin-left:auto; 
-    margin-right:auto;
-    position: relative;
-    top: 350px;
+  border: solid black;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 350px;
 }
 
 .cmsTable th {
-    border: solid black;
-    text-align: center;
-    height: 50px;
-    width: 70em;
+  border: solid black;
+  text-align: center;
+  height: 50px;
+  width: 70em;
 }
 
 .cmsTable tr:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 #cmsInput {
-    border: solid #1F2026 3px;  
-    padding: 19px; 
-    font-size: 18px;
+  border: solid #1f2026 3px;
+  padding: 19px;
+  font-size: 18px;
 }
 
 /* Cms text field */
 #txtField {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #cmsBtn {
-    margin-left: 10px;
+  margin-left: 10px;
+}
+
+#cmsOutBtn {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  font-size: 30px;
+  border-radius: 10px;
 }
 
 /* Cms message */
 #msg {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  text-align: center;
+}
+
+#displayWines {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  min-width: 1200px;
+  align-content: space-evenly;
+  justify-content: space-around;
+  text-align: center;
 }

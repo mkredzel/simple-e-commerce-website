@@ -1,14 +1,15 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 <html>
     <head>
         
-        <title>Wine World - Contact</title>
+        <title>Wine World - Home</title>
         
         <link rel="icon" href="/img/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+        
     </head>
     
     <body>
@@ -20,13 +21,13 @@
             <nav>
                 <div id="nav">
                     <ul>
-                    <li><a href="../index.php">HOME</a></li>
+                    <li><a href="index.php">HOME</a></li>
                     <li><a onclick="openAboutUs()">ABOUT US</a></li>
                     <li><a onclick="openRegisterForm()">REGISTER</a></li>   
                     <li><a onclick="openLoginForm()">LOGIN</a></li>   
-                    <li><a href="contact.html">CONTACT</a></li>   
+                    <li><a href="/html/contact.html">CONTACT</a></li>   
                     <li><a id="cart" onclick="openShoppingCart()">SHOPPING CART </a><p id="cartCount">0</p></li>
-
+                        
                         <!-- Login popup -->
                         <div class="loginForm-popup" id="loginForm">
                             <form action="/action_page.php" class="form-container">
@@ -41,7 +42,7 @@
                                 <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
                             </form>
                         </div>
-
+                        
                         <!-- Register popup -->
                         <div class="registerForm-popup" id="registerForm">
                             <form action="/action_page.php" class="form-container">
@@ -71,6 +72,7 @@
                             </form>
                         </div>
 
+                        
                         <!-- About us popup -->
                         <div class="aboutUs-popup" id="aboutUs">
                             <div class="container">
@@ -103,7 +105,7 @@
 
                         <!-- Check out popup -->
                         <div class="checkOutForm-popup" id="checkOutForm">
-                            <form action="" class="form-container">
+                            <form action="/action_page.php" class="form-container">
                                 <h1>Check Out</h1>
                                 <p>Please fill in this form for check out.</p>
                                 <hr>
@@ -134,19 +136,48 @@
                             <h2>Your confirmation # 123412412</h2>
                             <button type="button" class="btn cancel" onclick="closeConfirmation()">Close</button>
                         </div>
+                        </div>
+                        </div>
                     </ul>
                 </div>
             </nav>
         </header>
-        
-        <!-- Google maps -->
-        <div id="map"></div>
 
-        <!-- Contact information -->
-        <div id="contact">
-            <p><span>Phone</span> 0207 402 4141</p>
-            <p><span>Email</span> customerservice@wineworld.co.uk</p>
-            <p><span>Address</span> Wine World, 225 Edgware Rd, Paddington, London W2 1JU</p>
+        <!-- Wine spillage images -->
+        <img src="../img/logo.png" style="width:20%;float:left;box-shadow:none;">
+        <img src="../img/logo.png" style="width:20%;float:right;box-shadow:none;transform:scaleX(-1);">
+        
+        <!-- Home page text -->
+        <p id="content">Choose a bottle of wine to add it to your cart</p>
+
+        <!-- Search text field and a button -->
+        <div class="search">
+                <input type="text" placeholder="Search.." name="search">
+                <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                
+                <!-- Sort by combo box -->
+                <div class="box">
+                    <select id="sortBy" onchange="sort()">
+                        <option value="1">Featured</option>
+                        <option value="2">White Wine</option>
+                        <option value="3">Red/Rose Wine</option>
+                        <option value="4">Country: A-Z</option>
+                        <option value="5">Country: Z-A</option>
+                        <option value="6">ABV: Low To High</option>
+                        <option value="7">ABV: High To Low</option>
+                        <option value="8">Price: Low To High</option>
+                        <option value="9">Price: High To Low</option>
+                    </select>
+                    <p id="sortByPara">Sort By</p>
+                </div>
+        </div>
+        
+        <!-- Table with all the flip cards, paragraphs and buttons -->
+        
+        <div id="displayWines">
+        <?php include ('php/display_products.php');
+            echo output_products();
+        ?>
         </div>
 
         <!-- Footer -->
@@ -159,10 +190,9 @@
             <a href="#" class="fa fa-linkedin"></a>
             <a href="#" class="fa fa-youtube"></a>
         </footer>
-        
-        <script src="../js/map.js"></script>
-        <script src="../js/script.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg4Arw7BxF4xGuG5EUUIs1BBfUgtkE8Tk&callback=initMap"></script>
-    
     </body>
+    
+    <script src="/js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
 </html>

@@ -68,7 +68,7 @@ function closeCheckOut() {
 }
 
 function confirmation() {
-  if(document.getElementById("toggle").checked  == false){
+  if (document.getElementById("toggle").checked == false) {
     document.getElementById("term").style.color = "red";
     document.getElementById("term").style.fontSize = "30px";
   } else {
@@ -88,8 +88,27 @@ function closeConfirmation() {
 //===============
 
 let cartCount = 0;
-        
+
 function addToCount() {
   cartCount++;
-  document.getElementById('cartCount').innerHTML = cartCount;
+  document.getElementById("cartCount").innerHTML = cartCount;
+}
+
+//====================
+// SORTING USING AJAX
+//====================
+
+function sort() {
+  var e = document.getElementById("sortBy");
+  var selection = e.options[e.selectedIndex].value;
+
+  $.ajax({
+    url: "../php/sort_products.php", //the page containing php script
+    type: "post", //request type,
+    dataType: "json",
+    data: { selection: selection },
+    success: function(result) {
+      document.getElementById("displayWines").innerHTML = result.sortedProducts;
+    }
+  });
 }
