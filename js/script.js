@@ -112,3 +112,42 @@ function sort() {
     }
   });
 }
+
+//=======================
+// SEARCHING USING AJAX
+//=======================
+
+function search() {
+  var userInput = document.getElementById("searchInput").value;
+
+  $.ajax({
+    url: "../php/search_products.php", //the page containing php script
+    type: "post", //request type,
+    dataType: "json",
+    data: { userInput: userInput },
+    success: function(result) {
+      if (result.searchedProducts == "") {
+        document.getElementById("displayWines").innerHTML =
+          "<div><p id='searchFailure'>No matching wines found, please try again or use our wonderful sorting feature</p></div>";
+        document.getElementById("footer").style.position = "relative";
+        document.getElementById("footer").style.top = "400px";
+      } else {
+        document.getElementById("displayWines").innerHTML =
+          result.searchedProducts;
+      }
+    }
+  });
+}
+
+//==========================================
+// ENABLE ENTER KEY IN SEARCH INPUT FORM
+//==========================================
+
+let input = document.getElementById("searchInput");
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("searchBtn").click();
+  }
+});
