@@ -45,7 +45,7 @@
                         
                         <!-- Register popup -->
                         <div class="registerForm-popup" id="registerForm">
-                            <form action="/action_page.php" class="form-container">
+                            <form action="/php/register.php" class="form-container" method="post">
                                 <h1>Register</h1>
                                 <p>Please fill in this form to create an account.</p>
                                 <hr>
@@ -53,10 +53,10 @@
                                     <div class="column">
                                         <label for="fullName"><b>Full Name</b></label>
                                         <input type="text" placeholder="Enter Full Name" name="fullName" required>
-                                        <label for="address"><b>Address</b></label>
-                                        <input type="text" placeholder="Enter Home Address" name="address" required>
                                         <label for="email"><b>Email</b></label>
                                         <input type="text" placeholder="Enter Email" name="email" required>
+                                        <label for="address"><b>Address</b></label>
+                                        <input type="text" placeholder="Enter Home Address" name="address" required>
                                         <button type="submit" class="btn">Register</button>
                                     </div>
                                     <div class="column">
