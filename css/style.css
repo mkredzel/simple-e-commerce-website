@@ -17,6 +17,12 @@ body {
   font-size: 26px;
 }
 
+#checkLogin {
+  margin-top: 30px;
+  font-size: 28px;
+  font-family: "Alegreya Sans SC";
+}
+
 /* Background picture */
 html {
   background-image: url(../img/background.jpg);
@@ -615,4 +621,10 @@ input[type="checkbox"]:checked:after {
   left: 50%;
   top: 55%;
   transform: translate(-50%, -50%);
+}
+
+#registrationMsg {
+  position: relative;
+  right: 200px;
+  text-align: center;
 }

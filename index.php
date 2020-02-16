@@ -30,42 +30,43 @@
                         
                         <!-- Login popup -->
                         <div class="loginForm-popup" id="loginForm">
-                            <form action="/action_page.php" class="form-container">
+                            <form class="form-container" action="../php/login.php" method="post" id="loginWindow">
                                 <h1>Login</h1>
                                 <p>Please fill in this form to access your account.</p>
                                 <hr>
                                 <label for="email"><b>Email</b></label>
-                                <input type="text" placeholder="Enter Email" name="email" required>
+                                <input type="text" placeholder="Enter Email" name="loginEmail" required>
                                 <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
-                                <button type="submit" class="btn">Login</button>
+                                <input type="password" placeholder="Enter Password" name="loginPsw" required>
+                                <button class="btn" type="submit" onclick="login(); changeNav('My Profile')">Login</button>
                                 <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
                             </form>
                         </div>
-                        
+
                         <!-- Register popup -->
                         <div class="registerForm-popup" id="registerForm">
-                            <form action="/php/register.php" class="form-container" method="post">
+                            
+                            <form class="form-container">
                                 <h1>Register</h1>
                                 <p>Please fill in this form to create an account.</p>
                                 <hr>
                                 <div class="row">
                                     <div class="column">
                                         <label for="fullName"><b>Full Name</b></label>
-                                        <input type="text" placeholder="Enter Full Name" name="fullName" required>
+                                        <input type="text" placeholder="Enter Full Name" name="fullName" id="fullName" required>
                                         <label for="email"><b>Email</b></label>
-                                        <input type="text" placeholder="Enter Email" name="email" required>
+                                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
                                         <label for="address"><b>Address</b></label>
-                                        <input type="text" placeholder="Enter Home Address" name="address" required>
-                                        <button type="submit" class="btn">Register</button>
+                                        <input type="text" placeholder="Enter Home Address" name="address" id="address" required>
+                                        <button class="btn" onclick="register()">Register</button>
                                     </div>
                                     <div class="column">
                                         <label for="telephone"><b>Telephone</b></label>
-                                        <input type="text" placeholder="Enter Telephone Number" name="telephone" required>
+                                        <input type="text" placeholder="Enter Telephone Number" name="telephone" id="telephone" required>
                                         <label for="psw"><b>Password</b></label>
-                                        <input type="password" placeholder="Enter Password" name="psw" required>
+                                        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
                                         <label for="psw-repeat"><b>Repeat Password</b></label>
-                                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                                        <input type="password" placeholder="Repeat Password" name="pswRpt" id="pswRpt" required>
                                         <button type="button" class="btn cancel" onclick="closeRegisterForm()">Close</button>
                                     </div>
                                 </div>
@@ -191,7 +192,8 @@
         </footer>
     </body>
     
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="/js/script.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
     
 </html>
