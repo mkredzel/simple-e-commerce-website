@@ -87,11 +87,13 @@ function closeConfirmation() {
 // CART COUNTER
 //===============
 
-let cartCount = 0;
+function cartCount() {
+  var counter = JSON.parse(sessionStorage.basket);
+  document.getElementById("cartCount").innerHTML = Object.keys(counter).length;
+}
 
-function addToCount() {
-  cartCount++;
-  document.getElementById("cartCount").innerHTML = cartCount;
+if (sessionStorage.basket != undefined) {
+  window.onload = cartCount();
 }
 
 //====================
@@ -232,8 +234,7 @@ function login() {
     if (request.status === 200) {
       //Get data from server
       let responseData = request.responseText;
-      alert("cpcpcpcpcpcppc");
-      console.log("ohohohoohohoh");
+      alert(responseData);
     } else alert("Error communicating with server: " + request.status);
   };
 

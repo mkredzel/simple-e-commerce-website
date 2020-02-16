@@ -26,7 +26,7 @@
                     <li><a onclick="openRegisterForm()">REGISTER</a></li>   
                     <li><a onclick="openLoginForm()">LOGIN</a></li>   
                     <li><a href="/html/contact.html">CONTACT</a></li>   
-                    <li><a id="cart" onclick="openShoppingCart()">SHOPPING CART </a><p id="cartCount">0</p></li>
+                    <li><a id="cart" onclick="loadBasket(); openShoppingCart()">SHOPPING CART </a><p id="cartCount">0</p></li>
                         
                         <!-- Login popup -->
                         <div class="loginForm-popup" id="loginForm">
@@ -85,21 +85,7 @@
 
                         <!-- Shopping cart popup -->
                         <div class="shoppingCart-popup" id="shoppingCart">
-                            <div class="container">
-                                <h1>Shopping Cart</h1>
-                                <hr>
-                                <p> Wine 1 £12</p>
-                                <p> Wine 2 £7</p>
-                                <p> Wine 3 £6</p>
-                                <p> Wine 4 £15</p>
-                                <p> Wine 5 £12</p>
-                                <p> Wine 6 £11</p>
-                                <hr>
-                                <p> Total price: £66</p>
-
-                                <button type="button" onclick="openCheckOut()">Check Out</button>
-                                <button type="button" onclick="">Clear Cart</button>
-                                <button type="button" onclick="closeShoppingCart()">Close</button>
+                            <div class="container" id="shoppingCartWindow">
                             </div>
                         </div>
 
@@ -193,6 +179,7 @@
     </body>
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/basket.js"></script>
     <script src="/js/script.js"></script>
     
     

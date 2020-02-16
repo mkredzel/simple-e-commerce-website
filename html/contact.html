@@ -25,47 +25,47 @@
                     <li><a onclick="openRegisterForm()">REGISTER</a></li>   
                     <li><a onclick="openLoginForm()">LOGIN</a></li>   
                     <li><a href="contact.html">CONTACT</a></li>   
-                    <li><a id="cart" onclick="openShoppingCart()">SHOPPING CART </a><p id="cartCount">0</p></li>
-
+                    <li><a id="cart" onclick="loadBasket(); openShoppingCart()">SHOPPING CART </a><p id="cartCount">0</p></li>
+                        
                         <!-- Login popup -->
                         <div class="loginForm-popup" id="loginForm">
-                            <form action="/action_page.php" class="form-container">
+                            <form class="form-container" action="../php/login.php" method="post" id="loginWindow">
                                 <h1>Login</h1>
                                 <p>Please fill in this form to access your account.</p>
                                 <hr>
                                 <label for="email"><b>Email</b></label>
-                                <input type="text" placeholder="Enter Email" name="email" required>
+                                <input type="text" placeholder="Enter Email" name="loginEmail" required>
                                 <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
-                                <button type="submit" class="btn">Login</button>
+                                <input type="password" placeholder="Enter Password" name="loginPsw" required>
+                                <button class="btn" type="submit" onclick="login(); changeNav('My Profile')">Login</button>
                                 <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
                             </form>
                         </div>
 
                         <!-- Register popup -->
                         <div class="registerForm-popup" id="registerForm">
-                            <form action="/action_page.php" class="form-container">
+                            
+                            <form class="form-container">
                                 <h1>Register</h1>
                                 <p>Please fill in this form to create an account.</p>
                                 <hr>
                                 <div class="row">
                                     <div class="column">
                                         <label for="fullName"><b>Full Name</b></label>
-                                        <input type="text" placeholder="Enter Full Name" name="fullName" required>
+                                        <input type="text" placeholder="Enter Full Name" name="fullName" id="fullName" required>
                                         <label for="email"><b>Email</b></label>
-                                        <input type="text" placeholder="Enter Email" name="email" required>
+                                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
                                         <label for="address"><b>Address</b></label>
-                                        <input type="text" placeholder="Enter Home Address" name="address" required>
-                                        
-                                        <button type="submit" class="btn">Register</button>
+                                        <input type="text" placeholder="Enter Home Address" name="address" id="address" required>
+                                        <button class="btn" onclick="register()">Register</button>
                                     </div>
                                     <div class="column">
                                         <label for="telephone"><b>Telephone</b></label>
-                                        <input type="text" placeholder="Enter Telephone Number" name="telephone" required>
+                                        <input type="text" placeholder="Enter Telephone Number" name="telephone" id="telephone" required>
                                         <label for="psw"><b>Password</b></label>
-                                        <input type="password" placeholder="Enter Password" name="psw" required>
+                                        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
                                         <label for="psw-repeat"><b>Repeat Password</b></label>
-                                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                                        <input type="password" placeholder="Repeat Password" name="pswRpt" id="pswRpt" required>
                                         <button type="button" class="btn cancel" onclick="closeRegisterForm()">Close</button>
                                     </div>
                                 </div>
@@ -77,34 +77,20 @@
                             <div class="container">
                                 <h1>We Are The Wine World</h1>
                                 <p>Wine World specialises in selling brilliant wine. We believe wine – whether you’re buying it or selling it, and especially when you’re drinking it – should be full of fun. There are plenty of places where you can buy decent wine. What gets us really excited is interesting wine – the wines you taste that are just a little special. They’re difficult to find in the supermarkets but we’ve got hundreds of them for you to explore, and we don’t want you to pay over the odds to find them. Majestic makes interesting affordable, so everyone can enjoy it.</p>
-                                <button type="button" onclick="location.href = 'contact.html';">Contact</button>
+                                <button type="button" onclick="location.href = '/html/contact.html';">Contact</button>
                                 <button type="button" onclick="closeAboutUs()">Close</button>
                             </div>
                         </div>
 
                         <!-- Shopping cart popup -->
                         <div class="shoppingCart-popup" id="shoppingCart">
-                            <div class="container">
-                                <h1>Shopping Cart</h1>
-                                <hr>
-                                <p> Wine 1 £12</p>
-                                <p> Wine 2 £7</p>
-                                <p> Wine 3 £6</p>
-                                <p> Wine 4 £15</p>
-                                <p> Wine 5 £12</p>
-                                <p> Wine 6 £11</p>
-                                <hr>
-                                <p> Total price: £66</p>
-
-                                <button type="button" onclick="openCheckOut()">Check Out</button>
-                                <button type="button" onclick="">Clear Cart</button>
-                                <button type="button" onclick="closeShoppingCart()">Close</button>
+                            <div class="container" id="shoppingCartWindow">
                             </div>
                         </div>
 
                         <!-- Check out popup -->
                         <div class="checkOutForm-popup" id="checkOutForm">
-                            <form action="" class="form-container">
+                            <form action="/action_page.php" class="form-container">
                                 <h1>Check Out</h1>
                                 <p>Please fill in this form for check out.</p>
                                 <hr>
@@ -135,6 +121,8 @@
                             <h2>Your confirmation # 123412412</h2>
                             <button type="button" class="btn cancel" onclick="closeConfirmation()">Close</button>
                         </div>
+                        </div>
+                        </div>
                     </ul>
                 </div>
             </nav>
@@ -163,6 +151,8 @@
         
         <script src="../js/map.js"></script>
         <script src="../js/script.js"></script>
+        <script src="../js/basket.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg4Arw7BxF4xGuG5EUUIs1BBfUgtkE8Tk&callback=initMap"></script>
     
     </body>
