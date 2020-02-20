@@ -1,19 +1,32 @@
 <?php
 
-//Extract the product IDs that were sent to the server
-$prodIDs= $_POST['prodIDs'];
+//Include libraries
+require __DIR__ . '/../vendor/autoload.php';
 
-//Convert JSON string to PHP array 
-$productArray = json_decode($prodIDs, true);
+//Create instance of MongoDB client
+$mongoClient = (new MongoDB\Client);
+
+//Select a database
+$db = $mongoClient->Ecommerce;
+
+$collection = $db->orders;
+
+//Start session management
+session_start();
+
+//Extract the product IDs that were sent to the server
+$products = json_decode(file_get_contents('php://input'), true);
 
 //Output the IDs of the products that the customer has ordered
 echo '<h1>Products Sent to Server</h1>';
-for($i=0; $i<count($productArray); $i++){
-    echo '<p>Product ID: ' . $productArray[$i]['id'] . '. Count: ' . $productArray[$i]['count'] . '</p>';
-}
+
+echo json_encode($products);
+
+echo $_SESSION["loggedInUserEmail"];
+
+
 
 /* Next steps:
- * Get the customer ID from the $_SESSION variable or request customer's details.
  * Add an order document to the database containing product IDs, customer ID, date, count, price etc.
  * Update stock counts in product database.
  * Display confirmation page to customer.

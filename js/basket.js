@@ -1,4 +1,5 @@
 //Globals
+let products;
 window.onload = loadBasket();
 
 //Get basket from session storage or create one if it does not exist
@@ -15,20 +16,21 @@ function getBasket() {
 //Displays basket in page.
 function loadBasket() {
   let basket = getBasket(); //Load or create basket
-
+  products = [];
   //Build string with basket HTML
-  let htmlBasket = "";
+  let htmlBasket = "<form action='checkout.php' method='post'>";
   let totalPrice = 0;
   for (let i = 0; i < basket.length; ++i) {
     htmlBasket += basket[i].name + " | £ " + basket[i].price + "<br>";
     totalPrice += parseInt(basket[i].price);
+    products.push({ name: basket[i].name, price: basket[i].price });
   }
 
-  //Add hidden field to form that contains stringified version of product ids.
-  htmlBasket += "<hr><p id='totalPrice'>Total Price | £ </p>";
+  htmlBasket +=
+    "<hr><p id='totalPrice'>Total Price | £ </p><hr><label id='term'>Are you at least 18 years old? <input type='checkbox' id='toggleCheck'/></label><br>";
   //Add checkout and empty basket buttons
   htmlBasket +=
-    "<button type='button' onclick='openCheckOut()'>Check Out</button><br><button type='button' onclick='emptyBasket()'>Clear Cart</button><br><button type='button' onclick='closeShoppingCart()'>Close</button>";
+    "<button type='button' onclick='checkout()'>Check Out</button></form><hr><button type='button' onclick='emptyBasket()'>Clear Cart</button><hr><button type='button' onclick='closeShoppingCart()'>Close</button>";
 
   //Display number of products in basket
   document.getElementById("shoppingCartWindow").innerHTML = htmlBasket;
@@ -54,5 +56,38 @@ function addToBasket(prodName, prodPrice) {
 function emptyBasket() {
   sessionStorage.clear();
   document.getElementById("cartCount").innerHTML = 0;
+  products = [];
   loadBasket();
+}
+
+//===========
+// CHECKOUT
+//===========
+
+function checkout() {
+  let request = new XMLHttpRequest();
+  //Create event handler that specifies what should happen when server responds
+  request.onload = () => {
+    let responseData = request.responseText;
+    document.getElementById("confirmationWindow").innerHTML = responseData;
+    document.getElementById("confirmationWindow").innerHTML +=
+      "<hr><button type='button' class='btn cancel' onclick='closeConfirmation()'>Close</button>";
+    document.getElementById("shoppingCartWindow").style.display = "none";
+    document.getElementById("confirmation").style.display = "block";
+    loadBasket();
+  };
+  //Set up and send request
+  request.open("POST", "../php/checkout.php");
+
+  if (sessionStorage.basket == undefined) {
+    alert("The cart is empty. Please select wines you would like to purchase.");
+  } else if (!document.getElementById("checkLogin")) {
+    alert("You have to login to check out the cart");
+  } else if (document.getElementById("toggleCheck").checked == false) {
+    document.getElementById("term").style.color = "red";
+    alert("You must be over 18 to make a purchase on our website.");
+  } else {
+    request.send(JSON.stringify(products));
+    emptyBasket();
+  }
 }

@@ -7,7 +7,6 @@ function openLoginForm() {
   document.getElementById("registerForm").style.display = "none";
   document.getElementById("aboutUs").style.display = "none";
   document.getElementById("shoppingCart").style.display = "none";
-  document.getElementById("checkOutForm").style.display = "none";
   document.getElementById("confirmation").style.display = "none";
 }
 
@@ -20,7 +19,6 @@ function openRegisterForm() {
   document.getElementById("loginForm").style.display = "none";
   document.getElementById("aboutUs").style.display = "none";
   document.getElementById("shoppingCart").style.display = "none";
-  document.getElementById("checkOutForm").style.display = "none";
   document.getElementById("confirmation").style.display = "none";
 }
 
@@ -33,7 +31,6 @@ function openAboutUs() {
   document.getElementById("loginForm").style.display = "none";
   document.getElementById("registerForm").style.display = "none";
   document.getElementById("shoppingCart").style.display = "none";
-  document.getElementById("checkOutForm").style.display = "none";
   document.getElementById("confirmation").style.display = "none";
 }
 
@@ -46,25 +43,11 @@ function openShoppingCart() {
   document.getElementById("aboutUs").style.display = "none";
   document.getElementById("loginForm").style.display = "none";
   document.getElementById("registerForm").style.display = "none";
-  document.getElementById("checkOutForm").style.display = "none";
   document.getElementById("confirmation").style.display = "none";
 }
 
 function closeShoppingCart() {
   document.getElementById("shoppingCart").style.display = "none";
-}
-
-function openCheckOut() {
-  document.getElementById("checkOutForm").style.display = "block";
-  document.getElementById("aboutUs").style.display = "none";
-  document.getElementById("loginForm").style.display = "none";
-  document.getElementById("registerForm").style.display = "none";
-  document.getElementById("shoppingCart").style.display = "none";
-  document.getElementById("confirmation").style.display = "none";
-}
-
-function closeCheckOut() {
-  document.getElementById("checkOutForm").style.display = "none";
 }
 
 function confirmation() {
@@ -75,7 +58,6 @@ function confirmation() {
     document.getElementById("term").style.fontSize = "26px";
     document.getElementById("term").style.color = "black";
     document.getElementById("confirmation").style.display = "block";
-    document.getElementById("checkOutForm").style.display = "none";
   }
 }
 
@@ -288,7 +270,7 @@ function logout() {
 //=========================
 // CHANGE DETAILS - FORM
 //=========================
-//Logs the user out.
+
 function changeDetails() {
   document.getElementById("loginWindow").innerHTML =
     '<label for="changeName"><b>Full Name</b></label><input type="text" placeholder="Enter Full Name" name="changeName" id="changeName" required><label for="changeAddress"><b>Address</b></label><input type="text" placeholder="Enter Address" name="changeAddress" id="changeAddress" required><label for="changeTelephone"><b>Telephone</b></label><input type="text" placeholder="Enter Telephone" name="changeTelephone" id="changeTelephone" required><label for="changePassword"><b>Password</b></label><input type="password" placeholder="Enter Password" name="changePassword" id="changePassword" required><button type="submit" class="btn" onclick="changeDetailsRequest()">Change My Details</button><button type="submit" class="btn cancel" onclick="location.reload()">Close</button>';
