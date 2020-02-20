@@ -23,12 +23,12 @@ $stock = filter_input(INPUT_POST, 'productStock', FILTER_SANITIZE_STRING);
 $dataArray = [
     'name' => $name, 
     'type' => $type, 
-    'price' => $price, 
+    'price' => (int)$price, 
     'country' => $country, 
-    'abv' => $abv,
+    'abv' => (int)$abv,
     'description' => $description, 
     'image' => $image, 
-    'stock_count' => $stock
+    'stock_count' => (int)$stock
 ];
 
 $returnVal = $collection->insertOne($dataArray);

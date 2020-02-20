@@ -14,12 +14,12 @@ $confirmation = $_POST['userInput'];
 $cursor = $db->orders->find(['_id' => new MongoDB\BSON\ObjectId ($confirmation)]);
 
 //Find all of the customers that match  this criteria
-$result = "<table class='cmsTable' id='cmsTable'><tr><th>Customer ID</th><th>Shipping Address</th><th>Date</th><th>Time</th><th>Cost</th><th>Past Orders
+$result = "<table class='cmsTable' id='cmsTable'><tr><th>Customer ID</th><th>Shipping Address</th><th>Date</th><th>Time</th><th>Past Orders
 </th></tr>";
 
 foreach ($cursor as $order){
     $products = json_encode($order["products"]);
-    $result .= '<tr><th>'. $order["customer_id"] .'</th><th>'. $order["shipping_address"] .'</th><th>'. $order["date"] .'</th><th>'. $order["time"] .'</th><th>£'. $order["cost"] . '</th><th>'. $products .'</th></tr>';
+    $result .= '<tr><th>'. $order["customer_id"] .'</th><th>'. $order["shipping_address"] .'</th><th>'. $order["date"] .'</th><th>'. $order["time"] .'</th><th>'. $products .'</th></tr>';
 }
 
 $result .= "</table>";

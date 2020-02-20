@@ -28,12 +28,12 @@
   $productData = [
       'name' => $changePName,
       'type' => $changePType,
-      'price' => $changePPrice,
+      'price' => (int)$changePPrice,
       'country' => $changePCountry,
-      'abv' => $changePAbv,
+      'abv' => (int)$changePAbv,
       'description' => $changePDescription,
       'image' => $changePImage,
-      'stock_count' => $changePStock
+      'stock_count' => (int)$changePStock
   ];
 
   $updateProduct = $collection->replaceOne($replaceCriteria, $productData);

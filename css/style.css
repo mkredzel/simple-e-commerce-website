@@ -645,5 +645,5 @@ input[type="checkbox"]:checked:after {
 .userOrdersTable,
 th {
   border: solid black;
-  font-size: 16px;
+  font-size: 14px;
 }

@@ -15,28 +15,41 @@ $collection = $db->orders;
 session_start();
 
 //Extract the product IDs that were sent to the server
-$products = json_decode(file_get_contents('php://input'), true);
+$products = file_get_contents('php://input');
+
+$user = $_SESSION["loggedInUserEmail"];
+
+//Find all of the customers that match  this criteria
+$cursorID = $db->users->find(["email" => $user]);
+$cursorAddress = $db->users->find(["email" => $user]);
+
+foreach ($cursorID as $user){
+    $userID = $user['_id'];
+}
+
+foreach ($cursorAddress as $user){
+    $userAddress = $user['address'];
+}
+$date = date("d/m/Y");
+$time = date("h:i:sa");
 
 $dataArray = [
-    'customer_id' => $fullName, 
-    'email' => $email, 
-    'shipping_address' => $address, 
-    'telephone' => $telephone, 
-    'password' => $passwordHash
+    'customer_id' => $userID,
+    'shipping_address' => $userAddress, 
+    'date' => $date, 
+    'time' => $time,
+    'products' => [$products]
 ];
 
 $returnVal = $collection->insertOne($dataArray);
 
+$search = array( '$and' => array( array('customer_id' => $userID), array('date' => $date), array('time' => $time)));
+
+$cursorConfirmation = $db->orders->find($search);
+
+foreach ($cursorConfirmation as $order){
+    $confirmation = $order["_id"]; 
+ }
+
 //Output the IDs of the products that the customer has ordered
-echo '<h1>Products Sent to Server</h1>';
-
-echo json_encode($products);
-
-echo $_SESSION["loggedInUserEmail"];
-
-
-
-/* Next steps:
- * Add an order document to the database containing product IDs, customer ID, date, count, price etc.
- * Display confirmation page to customer.
- */
+echo '<h1>The order has been confirmed</h1><p>Confirmation: #'. $confirmation .'</p>';
