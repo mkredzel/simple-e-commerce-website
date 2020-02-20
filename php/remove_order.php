@@ -12,7 +12,7 @@ $db = $mongoClient->Ecommerce;
 $collection = $db->orders;
 
 //Extract the data that was sent to the server
-$confirmation= filter_input(INPUT_POST, 'confirmationInput', FILTER_SANITIZE_STRING);
+$confirmation = $_POST['confirmationInput'];
 
 $returnVal = $collection->deleteOne(['_id' => new MongoDB\BSON\ObjectId ($confirmation)]);
 header("Location: ../html/cms.html");

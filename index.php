@@ -117,12 +117,8 @@
 
                         <!-- Confirmation popup -->
                         <div id="confirmation">
-                            <div class="container">
-                            <h1>Thank you for shopping with us!</h1>
-                            <h2>Your confirmation # 123412412</h2>
-                            <button type="button" class="btn cancel" onclick="closeConfirmation()">Close</button>
-                        </div>
-                        </div>
+                            <div class="container" id ="confirmationWindow">
+                            </div>
                         </div>
                     </ul>
                 </div>
@@ -153,6 +149,7 @@
                         <option value="7">ABV: High To Low</option>
                         <option value="8">Price: Low To High</option>
                         <option value="9">Price: High To Low</option>
+                        <option value="10">Recommendations</option>
                     </select>
                     <p id="sortByPara">Sort By</p>
                 </div>

@@ -3,7 +3,7 @@
     session_start();
 
     if(array_key_exists("loggedInUserEmail", $_SESSION) ){
-        echo '<p id="checkLogin">'. $_SESSION["loggedInUserEmail"] . ' is logged in </p><br><br><button type="button" onclick="logout()">Log Out</button><br><br><button type="button"  onclick="changeDetails()">Change my details</button><br><br><button type="button" onclick="">View my past orders</button><br><br><button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>';
+        echo '<p id="checkLogin">'. $_SESSION["loggedInUserEmail"] . ' is logged in </p><br><br><button type="button" onclick="logout()">Log Out</button><br><br><button type="button"  onclick="changeDetails()">Change my details</button><br><br><button type="button" onclick="viewOrders()">View my past orders</button><br><br><button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>';
     }
     else{
         echo ' <h1>Login</h1>

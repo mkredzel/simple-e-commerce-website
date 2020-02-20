@@ -19,7 +19,7 @@ function checkSelection() {
       "<div id='txtField'><form action='../php/remove_product.php' method='post'><label for='nameInput'><b>Product Name</b></label><br><input type='text' id='nameInput' placeholder='Enter products name' name='productName' required><button id='cmsBtn'>Remove</button></div>";
   } else if (selection == "5") {
     document.getElementById("displayInfo").innerHTML =
-      "<div id='txtField'><input type='text' id='confirmationInput' placeholder='Enter confirmation #' name='productId' required><button id='cmsBtn'>View</button></div>";
+      "<div id='txtField'><input type='text' id='confirmationInput' placeholder='Enter confirmation #' name='confirmationInput' required><button id='cmsBtn' onclick='viewOrder()'>View</button></div>";
   } else {
     document.getElementById("displayInfo").innerHTML =
       "<div id='txtField'><form action='../php/remove_order.php' method='post'><input type='text' id='confirmationInput' placeholder='Enter confirmation #' name='confirmationInput' required><button id='cmsBtn' type='submit'>Delete</button></form></div>";
@@ -50,4 +50,22 @@ tableView();
 function updateProduct() {
   document.getElementById("loginWindow").innerHTML =
     '<label for="changeName"><b>Full Name</b></label><input type="text" placeholder="Enter Full Name" name="changeName" id="changeName" required><label for="changeAddress"><b>Address</b></label><input type="text" placeholder="Enter Address" name="changeAddress" id="changeAddress" required><label for="changeTelephone"><b>Telephone</b></label><input type="text" placeholder="Enter Telephone" name="changeTelephone" id="changeTelephone" required><label for="changePassword"><b>Password</b></label><input type="password" placeholder="Enter Password" name="changePassword" id="changePassword" required><button type="submit" class="btn" onclick="changeDetailsRequest()">Change My Details</button><button type="submit" class="btn cancel" onclick="location.reload()">Close</button>';
+}
+
+//==================
+// DISPLAY ORDER
+//==================
+
+function viewOrder() {
+  var userInput = document.getElementById("confirmationInput").value;
+
+  $.ajax({
+    url: "../php/view_order.php", //the page containing php script
+    type: "POST", //request type,
+    dataType: "json",
+    data: { userInput: userInput },
+    success: function(result) {
+      document.getElementById("displayInfo").innerHTML = result.viewedOrder;
+    }
+  });
 }

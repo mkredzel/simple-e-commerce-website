@@ -315,3 +315,19 @@ function changeDetailsRequest() {
     );
   }
 }
+
+//=========================
+// VIEW PAST ORDERS
+//=========================
+
+function viewOrders() {
+  let request = new XMLHttpRequest();
+  request.onload = () => {
+    let responseData = request.responseText;
+    document.getElementById("loginWindow").style.width = "1200px";
+    document.getElementById("loginWindow").innerHTML = responseData;
+  };
+  //Set up and send request
+  request.open("GET", "../php/view_past_orders.php");
+  request.send();
+}

@@ -187,7 +187,6 @@ table {
   text-align: center;
   position: relative;
   width: 100%;
-  top: 20px;
 }
 
 th {
@@ -265,6 +264,11 @@ button:hover {
   position: absolute;
   top: 111px;
   left: 50%;
+}
+
+#shoppingCartWindow {
+  font-size: 24px;
+  padding: 20px;
 }
 
 /* Add styles to the form container */
@@ -499,8 +503,7 @@ img {
 /* "18+ policy text" and check box */
 #term,
 #term:hover {
-  position: relative;
-  bottom: 50px;
+  margin-top: 200px;
   cursor: pointer;
 }
 
@@ -546,11 +549,12 @@ input[type="checkbox"]:checked:after {
 /* Cms */
 .cmsTable {
   border: solid black;
-  width: 75%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 350px;
+  top: 200px;
+  font-size: 16px;
 }
 
 .cmsTable th {
@@ -564,16 +568,24 @@ input[type="checkbox"]:checked:after {
   background-color: #f5f5f5;
 }
 
-#cmsInput {
+#nameInput,
+#typeInput,
+#priceInput,
+#countryInput,
+#abvInput,
+#descriptionInput,
+#imageInput,
+#stockInput,
+#confirmationInput {
   border: solid #1f2026 3px;
-  padding: 19px;
+  padding: 14px;
   font-size: 18px;
 }
 
 /* Cms text field */
 #txtField {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -627,4 +639,11 @@ input[type="checkbox"]:checked:after {
   position: relative;
   right: 200px;
   text-align: center;
+}
+
+/* userOrdersTable */
+.userOrdersTable,
+th {
+  border: solid black;
+  font-size: 16px;
 }
